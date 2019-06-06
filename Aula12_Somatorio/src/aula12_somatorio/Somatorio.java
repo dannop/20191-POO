@@ -1,10 +1,10 @@
-package aula12_fibonacci;
+package aula12_somatorio;
 
-public class Fibonacci extends Thread{
+public class Somatorio extends Thread{
     private int n;
     private int answer;
     
-    public Fibonacci(int n) {
+    public Somatorio(int n) {
         this.n = n;
     }
     
@@ -14,8 +14,8 @@ public class Fibonacci extends Thread{
             answer = n;
         } else {
             try {
-                Fibonacci f1 = new Fibonacci(n-1);
-                Fibonacci f2 = new Fibonacci(n-2);
+                Somatorio f1 = new Somatorio(n-1);
+                Somatorio f2 = new Somatorio(n-2);
                 f1.start();
                 f2.start();
                 f1.join();

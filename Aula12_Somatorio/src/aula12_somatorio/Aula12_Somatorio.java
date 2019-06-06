@@ -1,25 +1,25 @@
-package aula12_fibonacci;
+package aula12_somatorio;
 
 //author: Camila Camilo, Daniel Lessa, Maria Clara Mussi, Matheus Machado
 
-public class Aula12_Fibonacci {
+public class Aula12_Somatorio {
 
     public static void main(String[] args) {
         long inicio, fim, tempo;
-        int num_teste = 40;
+        int num_teste = 10;
         
         inicio = System.currentTimeMillis();
-        FibonacciIneficiente first_test = new FibonacciIneficiente();
-        first_test.show(num_teste);
+        int primeiro_res = SomatorioIneficiente.soma(num_teste);
+        System.out.println("Primeiro resultado: " + primeiro_res);
         fim = System.currentTimeMillis();
         tempo = fim - inicio; System.out.println("Tempo gasto: " + tempo);
         
         inicio = System.currentTimeMillis();
-        Fibonacci second_test = new Fibonacci(num_teste);
+        Somatorio segundo_res = new Somatorio(num_teste);
         try {
-            second_test.start();
-            second_test.join();
-            System.out.println("Resposta:" + second_test.getAnswer());
+            segundo_res.start();
+            segundo_res.join();
+            System.out.println("Segundo resultado:" + segundo_res.getAnswer());
         }catch(InterruptedException ex) {
             System.out.println("Erro na entrada" + ex);
         }

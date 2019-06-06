@@ -9,5 +9,7 @@ public class FibonacciIneficiente {
         for (int i = 0; i <= n; i++) {
             System.out.print("(" + i + "):" + FibonacciIneficiente.fibo(i) + "\t");
         }
+        
+        System.out.println("");
     }
 }
